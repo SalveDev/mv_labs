@@ -13,9 +13,9 @@ const process = [
 ];
 
 const projects = [
-  {name:'Lucha Club',tag:'E-COMMERCE DESTACADO',summary:'Tienda digital para fans de lucha libre, MMA y cultura combat sports en Querétaro.',image:'assets/projects/lucha-club.svg',url:'https://lucha-clubdemo.vercel.app/',featured:true},
-  {name:'Sistema de Automatización',tag:'SOFTWARE A LA MEDIDA',summary:'Procesos internos centralizados para reducir trabajo manual y tomar mejores decisiones.',image:'assets/projects/automation.svg',url:'#contacto'},
-  {name:'Landing Comercial',tag:'DISEÑO + CONVERSIÓN',summary:'Una experiencia enfocada en presentar valor y convertir interés en nuevos contactos.',image:'assets/projects/landing.svg',url:'#contacto'}
+  {name:'Tienda Digital',tag:'E-COMMERCE DESTACADO',summary:'Una tienda en línea completa, adaptable a cualquier catálogo y preparada para convertir visitas en compras.',image:'assets/projects/tienda-demo.svg',url:'https://lucha-clubdemo.vercel.app/',cta:'Ver demo en vivo',featured:true},
+  {name:'Sistema POS',tag:'SOFTWARE A LA MEDIDA',summary:'Punto de venta para administrar productos, cobros e información diaria desde una interfaz sencilla.',image:'assets/projects/pos.svg',url:'https://wa.me/525515976748?text=Hola%20MV%20Labs%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20sistema%20POS.',cta:'Cotizar un sistema POS'},
+  {name:'Invitación Digital',tag:'EVENTO + EXPERIENCIA DIGITAL',summary:'Invitación web adaptable a celular con información del evento, ubicación y confirmación de asistencia.',image:'assets/projects/invitacion.svg',url:'https://invitacion-boda-seven.vercel.app/',cta:'Ver demo en vivo'}
 ];
 
 const faqs = [
@@ -30,7 +30,7 @@ servicesGrid.innerHTML = services.map(([icon,title,text],i)=>`<article class="se
 
 document.querySelector('#timeline').innerHTML = process.map(([num,title,text])=>`<li class="reveal"><span>${num}</span><div><h3>${title}</h3><p>${text}</p></div></li>`).join('');
 
-document.querySelector('#projects-grid').innerHTML = projects.map((p,i)=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} aria-label="Ver ${p.name}"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy"><span class="project-number">0${i+1}</span>${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}>${p.url.startsWith('http')?'Ver demo en vivo':'Conocer el proyecto'} <span>↗</span></a></div></article>`).join('');
+document.querySelector('#projects-grid').innerHTML = projects.map((p,i)=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} aria-label="${p.cta}: ${p.name}"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy"><span class="project-number">0${i+1}</span>${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}>${p.cta} <span>↗</span></a></div></article>`).join('');
 
 document.querySelector('#faq-list').innerHTML = faqs.map(([q,a],i)=>`<details class="faq-item reveal"><summary><span>${String(i+1).padStart(2,'0')}</span><strong>${q}</strong><i aria-hidden="true">+</i></summary><p>${a}</p></details>`).join('');
 

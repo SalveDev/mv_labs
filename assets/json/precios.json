@@ -1,0 +1,121 @@
+{
+    "section": {
+        "id": "services-pricing",
+        "title": "Servicios digitales para cada etapa de tu negocio",
+        "subtitle": "Elige un producto digital de precio fijo o trabaja con nosotros semana a semana para construir algo a la medida.",
+        "description": "En MV Labs ofrecemos soluciones accesibles para emprendedores, negocios locales y proyectos que necesitan presencia digital, automatización o desarrollo web sin pagar grandes cantidades de golpe.",
+        "categories": [
+            {
+                "id": "fixed-products",
+                "title": "Productos digitales",
+                "subtitle": "Precio fijo, entrega clara y alcance definido.",
+                "type": "fixed_price",
+                "items": [
+                    {
+                        "name": "Invitación digital",
+                        "price": "Desde $999 MXN",
+                        "description": "Invitación web para bodas, XV años, bautizos, cumpleaños o eventos especiales.",
+                        "features": [
+                            "Diseño responsivo",
+                            "Información del evento",
+                            "Ubicación con mapa",
+                            "Confirmación de asistencia",
+                            "Galería o foto principal"
+                        ],
+                        "ideal_for": "Eventos sociales y familiares"
+                    },
+                    {
+                        "name": "Landing page sencilla",
+                        "price": "Desde $3,500 MXN",
+                        "description": "Página de presentación para negocios, servicios o campañas.",
+                        "features": [
+                            "Sección de presentación",
+                            "Servicios o productos",
+                            "Botón de WhatsApp",
+                            "Formulario de contacto",
+                            "Diseño adaptable a celular"
+                        ],
+                        "ideal_for": "Negocios que necesitan presencia digital rápida"
+                    },
+                    {
+                        "name": "Menú QR",
+                        "price": "Desde $1,500 MXN",
+                        "description": "Menú digital para restaurantes, cafeterías o negocios de alimentos.",
+                        "features": [
+                            "Diseño personalizado",
+                            "Categorías de productos",
+                            "Precios editables",
+                            "Código QR listo para imprimir"
+                        ],
+                        "ideal_for": "Restaurantes y cafeterías"
+                    },
+                    {
+                        "name": "Catálogo digital",
+                        "price": "Desde $2,500 MXN",
+                        "description": "Catálogo web para mostrar productos o servicios sin necesidad de tienda en línea completa.",
+                        "features": [
+                            "Listado de productos",
+                            "Categorías",
+                            "Botón de cotización por WhatsApp",
+                            "Diseño responsive"
+                        ],
+                        "ideal_for": "Tiendas, proveedores y emprendedores"
+                    }
+                ]
+            },
+            {
+                "id": "weekly-development",
+                "title": "Desarrollo semanal",
+                "subtitle": "Para proyectos que necesitan crecer, cambiar o construirse por etapas.",
+                "type": "weekly_subscription",
+                "items": [
+                    {
+                        "name": "Starter",
+                        "price": "$999 MXN / semana",
+                        "description": "Ideal para mejoras pequeñas, ajustes, automatizaciones simples o evolución de una web existente.",
+                        "features": [
+                            "Avances semanales",
+                            "Revisión semanal",
+                            "Ajustes menores",
+                            "Soporte durante el desarrollo",
+                            "Sin pago inicial grande"
+                        ],
+                        "ideal_for": "Proyectos pequeños o clientes que quieren empezar poco a poco"
+                    },
+                    {
+                        "name": "Business",
+                        "price": "$1,999 MXN / semana",
+                        "description": "Para sistemas web, dashboards, portales internos o integraciones más completas.",
+                        "features": [
+                            "Desarrollo continuo",
+                            "Planeación de funcionalidades",
+                            "Reunión semanal",
+                            "Despliegues por etapa",
+                            "Soporte técnico durante el desarrollo"
+                        ],
+                        "ideal_for": "Negocios que necesitan una solución a medida"
+                    },
+                    {
+                        "name": "Growth",
+                        "price": "Cotización personalizada",
+                        "description": "Para proyectos grandes, múltiples módulos o necesidades avanzadas.",
+                        "features": [
+                            "Prioridad de desarrollo",
+                            "Arquitectura personalizada",
+                            "Integraciones avanzadas",
+                            "Escalabilidad",
+                            "Acompañamiento estratégico"
+                        ],
+                        "ideal_for": "Empresas o proyectos con operación más compleja"
+                    }
+                ]
+            }
+        ],
+        "cta": {
+            "title": "¿No sabes qué plan elegir?",
+            "description": "Cuéntanos tu idea y te ayudamos a elegir entre un producto de precio fijo o un plan de desarrollo semanal.",
+            "button_label": "Cotizar mi proyecto",
+            "button_link": "https://wa.me/525515976748?text=Hola%20MV%20Labs%2C%20vi%20sus%20precios%20y%20quiero%20cotizar%20mi%20proyecto."
+        }
+    }
+}
