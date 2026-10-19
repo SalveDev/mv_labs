@@ -1,0 +1,138 @@
+{
+  "currency": "MXN",
+  "billing_period": "monthly",
+  "plans": [
+    {
+      "id": "esencial",
+      "name": "Presencia Esencial",
+      "description": "Mantén tus redes sociales activas con contenido profesional.",
+      "price": 1500,
+      "introductory_price": true,
+      "recommended": false,
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "content": {
+        "posts": 6,
+        "stories": 4,
+        "reels": 0,
+        "monthly_production_sessions": 0,
+        "client_provides_material": true,
+        "graphic_design": "basic",
+        "copywriting": true
+      },
+      "management": {
+        "social_media_management": "basic",
+        "content_planning": "basic",
+        "post_scheduling": true,
+        "profile_optimization": false,
+        "performance_monitoring": false
+      },
+      "advertising": {
+        "included": false,
+        "platform": "meta_ads",
+        "budget_min": 0,
+        "budget_max": 0,
+        "campaign_management": false,
+        "audience_targeting": false,
+        "campaign_optimization": false,
+        "budget_included_in_monthly_price": false
+      },
+      "reporting": {
+        "included": true,
+        "level": "basic",
+        "frequency": "monthly",
+        "strategy_meeting": false
+      }
+    },
+    {
+      "id": "presencia_digital",
+      "name": "Presencia Digital",
+      "description": "Contenido, fotografía, video y publicidad para impulsar tu negocio.",
+      "price": 2500,
+      "introductory_price": true,
+      "recommended": true,
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "content": {
+        "posts": 12,
+        "stories": 8,
+        "reels": 2,
+        "monthly_production_sessions": 1,
+        "client_provides_material": false,
+        "graphic_design": "standard",
+        "copywriting": true
+      },
+      "management": {
+        "social_media_management": "complete",
+        "content_planning": "monthly",
+        "post_scheduling": true,
+        "profile_optimization": true,
+        "performance_monitoring": true
+      },
+      "advertising": {
+        "included": true,
+        "platform": "meta_ads",
+        "budget_min": 500,
+        "budget_max": 800,
+        "campaign_management": true,
+        "audience_targeting": true,
+        "campaign_optimization": true,
+        "budget_included_in_monthly_price": true
+      },
+      "reporting": {
+        "included": true,
+        "level": "standard",
+        "frequency": "monthly",
+        "strategy_meeting": false
+      }
+    },
+    {
+      "id": "premium",
+      "name": "Presencia Premium",
+      "description": "Producción avanzada de contenido y estrategias publicitarias para fortalecer tu posicionamiento digital.",
+      "price": 4500,
+      "introductory_price": true,
+      "recommended": false,
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "content": {
+        "posts": 20,
+        "stories": 16,
+        "reels": 4,
+        "monthly_production_sessions": 2,
+        "client_provides_material": false,
+        "graphic_design": "custom",
+        "copywriting": true
+      },
+      "management": {
+        "social_media_management": "advanced",
+        "content_planning": "strategic",
+        "post_scheduling": true,
+        "profile_optimization": true,
+        "performance_monitoring": true
+      },
+      "advertising": {
+        "included": true,
+        "platform": "meta_ads",
+        "budget_min": 1200,
+        "budget_max": 1500,
+        "campaign_management": true,
+        "audience_targeting": true,
+        "campaign_optimization": true,
+        "budget_included_in_monthly_price": true
+      },
+      "reporting": {
+        "included": true,
+        "level": "advanced",
+        "frequency": "monthly",
+        "strategy_meeting": true
+      }
+    }
+  ]
+}

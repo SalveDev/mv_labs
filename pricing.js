@@ -19,11 +19,11 @@ export class ServicesPricingSection {
       </article>`;
   }
 
-  renderCategory(category, index) {
+  renderCategory(category) {
     return `
       <section class="pricing-category pricing-category--${category.type}" aria-labelledby="${category.id}-title">
         <div class="category-heading">
-          <span>0${index + 1}</span>
+
           <div><h2 id="${category.id}-title">${category.title}</h2><p>${category.subtitle}</p></div>
         </div>
         <div class="price-grid">${category.items.map(item => this.renderCard(item, category.type)).join('')}</div>
@@ -39,11 +39,11 @@ export class ServicesPricingSection {
         <p class="hero-subtitle">${subtitle}</p>
         <p class="hero-description">${description}</p>
         <div class="choice-map" aria-label="Modelos de servicio">
-          ${categories.map((category, index) => `<a href="#${category.id}"><span>0${index + 1}</span>${category.title}<i>↘</i></a>`).join('')}
+          ${categories.map(category => `<a href="#${category.id}">${category.title}</a>`).join('')}
         </div>
       </section>
-      ${categories.map((category, index) => this.renderCategory(category, index)).join('')}
-      <section class="pricing-cta" id="contact"><span aria-hidden="true">✦</span><h2>${cta.title}</h2><p>${cta.description}</p><a href="${cta.button_link}" target="_blank" rel="noopener noreferrer">${cta.button_label} <b>↗</b></a></section>`;
+      ${categories.map(category => this.renderCategory(category)).join('')}
+      <section class="pricing-cta" id="contact"><span aria-hidden="true">✦</span><h2>${cta.title}</h2><p>${cta.description}</p><a href="${cta.button_link}" target="_blank" rel="noopener noreferrer">${cta.button_label}</a></section>`;
   }
 }
 

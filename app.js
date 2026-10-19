@@ -1,5 +1,5 @@
 const services = [
-  ['↗','Páginas web','Sitios rápidos, memorables y diseñados para convertir visitas en clientes.'],
+  ['◉','Páginas web','Sitios rápidos, memorables y diseñados para convertir visitas en clientes.'],
   ['◉','Tiendas en línea','E-commerce atractivo y fácil de administrar, listo para recibir pagos y vender.'],
   ['☰','Menús digitales','Menús visuales para restaurantes, actualizables y perfectos para compartir con QR.'],
   ['⌘','Software a medida','Sistemas y herramientas creadas exactamente para la forma en que trabaja tu negocio.'],
@@ -14,7 +14,7 @@ const process = [
 
 const projects = [
   {name:'Tienda Digital',tag:'E-COMMERCE DESTACADO',summary:'Una tienda en línea completa, adaptable a cualquier catálogo y preparada para convertir visitas en compras.',image:'assets/projects/tienda-demo.svg',url:'https://lucha-clubdemo.vercel.app/',cta:'Ver demo en vivo',featured:true},
-  {name:'Sistema POS',tag:'SOFTWARE A LA MEDIDA',summary:'Punto de venta para administrar productos, cobros e información diaria desde una interfaz sencilla.',image:'assets/projects/pos.svg',url:'https://wa.me/525515976748?text=Hola%20MV%20Labs%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20sistema%20POS.',cta:'Cotizar un sistema POS'},
+  {name:'Sistema POS',tag:'SOFTWARE A LA MEDIDA',summary:'Punto de venta para administrar productos, cobros e información diaria desde una interfaz sencilla.',image:'assets/projects/pos.svg',url:'https://wa.me/524427421651?text=Hola%20MV%20Labs%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20sistema%20POS.',cta:'Cotizar un sistema POS'},
   {name:'Invitación Digital',tag:'EVENTO + EXPERIENCIA DIGITAL',summary:'Invitación web adaptable a celular con información del evento, ubicación y confirmación de asistencia.',image:'assets/projects/invitacion.svg',url:'https://invitacion-boda-seven.vercel.app/',cta:'Ver demo en vivo'}
 ];
 
@@ -26,13 +26,13 @@ const faqs = [
 ];
 
 const servicesGrid = document.querySelector('#services-grid');
-servicesGrid.innerHTML = services.map(([icon,title,text],i)=>`<article class="service-card reveal"><div class="service-top"><span class="service-icon">${icon}</span><small>0${i+1}</small></div><h3>${title}</h3><p>${text}</p></article>`).join('');
+if (servicesGrid) servicesGrid.innerHTML = services.map(([icon,title,text])=>`<article class="service-card reveal"><div class="service-top"><span class="service-icon">${icon}</span></div><h3>${title}</h3><p>${text}</p></article>`).join('');
 
-document.querySelector('#timeline').innerHTML = process.map(([num,title,text])=>`<li class="reveal"><span>${num}</span><div><h3>${title}</h3><p>${text}</p></div></li>`).join('');
+if (document.querySelector('#timeline')) document.querySelector('#timeline').innerHTML = process.map(([num,title,text])=>`<li class="reveal"><span>${num}</span><div><h3>${title}</h3><p>${text}</p></div></li>`).join('');
 
-document.querySelector('#projects-grid').innerHTML = projects.map((p,i)=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} aria-label="${p.cta}: ${p.name}"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy"><span class="project-number">0${i+1}</span>${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}>${p.cta} <span>↗</span></a></div></article>`).join('');
+if (document.querySelector('#projects-grid')) document.querySelector('#projects-grid').innerHTML = projects.map(p=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} aria-label="${p.cta}: ${p.name}"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy">${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}>${p.cta}</a></div></article>`).join('');
 
-document.querySelector('#faq-list').innerHTML = faqs.map(([q,a],i)=>`<details class="faq-item reveal"><summary><span>${String(i+1).padStart(2,'0')}</span><strong>${q}</strong><i aria-hidden="true">+</i></summary><p>${a}</p></details>`).join('');
+if (document.querySelector('#faq-list')) document.querySelector('#faq-list').innerHTML = faqs.map(([q,a])=>`<details class="faq-item reveal"><summary><strong>${q}</strong><i aria-hidden="true">+</i></summary><p>${a}</p></details>`).join('');
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 const toggle = document.querySelector('.menu-toggle');
