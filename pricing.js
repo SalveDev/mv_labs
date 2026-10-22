@@ -20,13 +20,38 @@ export class ServicesPricingSection {
   }
 
   renderCategory(category) {
+    if (category.type === 'landing_pages') return this.renderLandingPlans(category);
     return `
-      <section class="pricing-category pricing-category--${category.type}" aria-labelledby="${category.id}-title">
+      <section class="pricing-category pricing-category--${category.type}" id="${category.id}" aria-labelledby="${category.id}-title">
         <div class="category-heading">
 
           <div><h2 id="${category.id}-title">${category.title}</h2><p>${category.subtitle}</p></div>
         </div>
         <div class="price-grid">${category.items.map(item => this.renderCard(item, category.type)).join('')}</div>
+      </section>`;
+  }
+
+  renderLandingPlans(category) {
+    const conditions = category.conditions;
+    const money = new Intl.NumberFormat('es-MX', { style: 'currency', currency: category.currency, maximumFractionDigits: 0 });
+    return `
+      <section class="pricing-category pricing-category--landing" id="${category.id}" aria-labelledby="${category.id}-title">
+        <div class="category-heading"><div><h2 id="${category.id}-title">${category.title}</h2><p>${category.subtitle}</p></div></div>
+        <div class="price-grid">${category.items.map(plan => `
+          <article class="price-card${plan.featured ? ' price-card--featured' : ''}" id="${plan.id}">
+            <div class="landing-labels"><span>${plan.level}</span>${plan.featured ? '<span class="landing-badge">Destacado</span>' : ''}</div>
+            <div class="card-heading"><h3>${plan.name}</h3><p class="price">${money.format(plan.price)} MXN</p><p class="landing-payment">Pago único · más IVA</p></div>
+            <p class="card-description">${plan.description}</p>
+            <p class="landing-delivery">Entrega: ${plan.delivery.min}–${plan.delivery.max} días hábiles</p>
+            <ul>${plan.features.map(feature => `<li><span aria-hidden="true">✓</span>${feature}</li>`).join('')}</ul>
+            <a class="landing-plan-cta" href="https://wa.me/524427421651?text=${encodeURIComponent(`Hola MV Labs, me interesa el plan de Landing Pages ${plan.name} (${plan.level}) de ${money.format(plan.price)} MXN más IVA.`)}" target="_blank" rel="noopener noreferrer">Solicitar plan ${plan.level}</a>
+          </article>`).join('')}</div>
+        <aside class="landing-conditions" aria-labelledby="landing-conditions-title">
+          <h3 id="landing-conditions-title">Condiciones de Landing Pages</h3>
+          <p>${conditions.advance_percentage}% de anticipo y ${conditions.final_percentage}% de pago final. Los precios no incluyen IVA, dominio, hosting ni mantenimiento.</p>
+          <p>Servicios externos: ${conditions.external_services.toLowerCase()}. Cambios posteriores: ${conditions.later_changes.toLowerCase()}.</p>
+          <p><strong>No incluye:</strong> ${conditions.exclusions.join(', ')}.</p>
+        </aside>
       </section>`;
   }
 

@@ -1,121 +1,219 @@
 {
-    "section": {
-        "id": "services-pricing",
-        "title": "Servicios digitales para cada etapa de tu negocio",
-        "subtitle": "Elige un producto digital de precio fijo o trabaja con nosotros semana a semana para construir algo a la medida.",
-        "description": "En MV Labs ofrecemos soluciones accesibles para emprendedores, negocios locales y proyectos que necesitan presencia digital, automatización o desarrollo web sin pagar grandes cantidades de golpe.",
-        "categories": [
-            {
-                "id": "fixed-products",
-                "title": "Productos digitales",
-                "subtitle": "Precio fijo, entrega clara y alcance definido.",
-                "type": "fixed_price",
-                "items": [
-                    {
-                        "name": "Invitación digital",
-                        "price": "Desde $999 MXN",
-                        "description": "Invitación web para bodas, XV años, bautizos, cumpleaños o eventos especiales.",
-                        "features": [
-                            "Diseño responsivo",
-                            "Información del evento",
-                            "Ubicación con mapa",
-                            "Confirmación de asistencia",
-                            "Galería o foto principal"
-                        ],
-                        "ideal_for": "Eventos sociales y familiares"
-                    },
-                    {
-                        "name": "Landing page sencilla",
-                        "price": "Desde $3,500 MXN",
-                        "description": "Página de presentación para negocios, servicios o campañas.",
-                        "features": [
-                            "Sección de presentación",
-                            "Servicios o productos",
-                            "Botón de WhatsApp",
-                            "Formulario de contacto",
-                            "Diseño adaptable a celular"
-                        ],
-                        "ideal_for": "Negocios que necesitan presencia digital rápida"
-                    },
-                    {
-                        "name": "Menú QR",
-                        "price": "Desde $1,500 MXN",
-                        "description": "Menú digital para restaurantes, cafeterías o negocios de alimentos.",
-                        "features": [
-                            "Diseño personalizado",
-                            "Categorías de productos",
-                            "Precios editables",
-                            "Código QR listo para imprimir"
-                        ],
-                        "ideal_for": "Restaurantes y cafeterías"
-                    },
-                    {
-                        "name": "Catálogo digital",
-                        "price": "Desde $2,500 MXN",
-                        "description": "Catálogo web para mostrar productos o servicios sin necesidad de tienda en línea completa.",
-                        "features": [
-                            "Listado de productos",
-                            "Categorías",
-                            "Botón de cotización por WhatsApp",
-                            "Diseño responsive"
-                        ],
-                        "ideal_for": "Tiendas, proveedores y emprendedores"
-                    }
-                ]
+  "section": {
+    "id": "services-pricing",
+    "title": "Servicios digitales para cada etapa de tu negocio",
+    "subtitle": "Elige un producto digital de precio fijo o trabaja con nosotros semana a semana para construir algo a la medida.",
+    "description": "En MV Labs ofrecemos soluciones accesibles para emprendedores, negocios locales y proyectos que necesitan presencia digital, automatización o desarrollo web sin pagar grandes cantidades de golpe.",
+    "categories": [
+      {
+        "id": "landing-pages",
+        "title": "Landing Pages",
+        "subtitle": "Una página para presentar tu negocio y convertir visitas en contactos. Pago único en MXN.",
+        "type": "landing_pages",
+        "currency": "MXN",
+        "items": [
+          {
+            "id": "landing_esencial",
+            "name": "Presencia Digital",
+            "level": "Esencial",
+            "description": "Ideal para emprendedores que necesitan aparecer en internet y recibir contactos.",
+            "price": 2500,
+            "payment_type": "unico",
+            "delivery": {
+              "min": 3,
+              "max": 5,
+              "unit": "dias_habiles"
             },
-            {
-                "id": "weekly-development",
-                "title": "Desarrollo semanal",
-                "subtitle": "Para proyectos que necesitan crecer, cambiar o construirse por etapas.",
-                "type": "weekly_subscription",
-                "items": [
-                    {
-                        "name": "Starter",
-                        "price": "$999 MXN / semana",
-                        "description": "Ideal para mejoras pequeñas, ajustes, automatizaciones simples o evolución de una web existente.",
-                        "features": [
-                            "Avances semanales",
-                            "Revisión semanal",
-                            "Ajustes menores",
-                            "Soporte durante el desarrollo",
-                            "Sin pago inicial grande"
-                        ],
-                        "ideal_for": "Proyectos pequeños o clientes que quieren empezar poco a poco"
-                    },
-                    {
-                        "name": "Business",
-                        "price": "$1,999 MXN / semana",
-                        "description": "Para sistemas web, dashboards, portales internos o integraciones más completas.",
-                        "features": [
-                            "Desarrollo continuo",
-                            "Planeación de funcionalidades",
-                            "Reunión semanal",
-                            "Despliegues por etapa",
-                            "Soporte técnico durante el desarrollo"
-                        ],
-                        "ideal_for": "Negocios que necesitan una solución a medida"
-                    },
-                    {
-                        "name": "Growth",
-                        "price": "Cotización personalizada",
-                        "description": "Para proyectos grandes, múltiples módulos o necesidades avanzadas.",
-                        "features": [
-                            "Prioridad de desarrollo",
-                            "Arquitectura personalizada",
-                            "Integraciones avanzadas",
-                            "Escalabilidad",
-                            "Acompañamiento estratégico"
-                        ],
-                        "ideal_for": "Empresas o proyectos con operación más compleja"
-                    }
-                ]
-            }
+            "max_sections": 4,
+            "revision_rounds": 1,
+            "features": [
+              "Diseño responsivo para celular, tablet y computadora",
+              "Una página con hasta 4 secciones",
+              "Información del negocio, servicios y contacto",
+              "Botón directo a WhatsApp",
+              "Enlaces a redes sociales",
+              "Formulario básico de contacto",
+              "SEO básico",
+              "1 ronda de ajustes"
+            ],
+            "featured": false
+          },
+          {
+            "id": "landing_profesional",
+            "name": "Captación de Clientes",
+            "level": "Profesional",
+            "description": "Para negocios que buscan convertir visitantes en prospectos.",
+            "price": 5500,
+            "payment_type": "unico",
+            "delivery": {
+              "min": 7,
+              "max": 10,
+              "unit": "dias_habiles"
+            },
+            "max_sections": 8,
+            "revision_rounds": 2,
+            "features": [
+              "Todo lo incluido en el plan Esencial",
+              "Hasta 8 secciones personalizadas",
+              "Diseño visual adaptado a la identidad de marca",
+              "Animaciones y transiciones ligeras",
+              "Galería de productos o servicios",
+              "Testimonios y preguntas frecuentes",
+              "Formularios con notificación por correo",
+              "Integración con Google Maps",
+              "Google Analytics y Search Console",
+              "SEO inicial optimizado",
+              "2 rondas de ajustes"
+            ],
+            "featured": true
+          },
+          {
+            "id": "landing_premium",
+            "name": "Experiencia Digital",
+            "level": "Premium",
+            "description": "Para empresas que necesitan una presencia diferenciada y herramientas comerciales.",
+            "price": 10500,
+            "payment_type": "unico",
+            "delivery": {
+              "min": 10,
+              "max": 15,
+              "unit": "dias_habiles"
+            },
+            "max_sections": 12,
+            "revision_rounds": 3,
+            "features": [
+              "Todo lo incluido en el plan Profesional",
+              "Diseño exclusivo con propuesta visual",
+              "Hasta 12 secciones o bloques de contenido",
+              "Animaciones avanzadas y elementos interactivos",
+              "Catálogo digital de productos o servicios",
+              "Integración con herramientas de seguimiento de prospectos",
+              "Eventos de conversión para campañas publicitarias",
+              "Optimización avanzada de rendimiento",
+              "SEO técnico inicial",
+              "3 rondas de ajustes",
+              "Capacitación básica para uso y administración, cuando aplique"
+            ],
+            "featured": false
+          }
         ],
-        "cta": {
-            "title": "¿No sabes qué plan elegir?",
-            "description": "Cuéntanos tu idea y te ayudamos a elegir entre un producto de precio fijo o un plan de desarrollo semanal.",
-            "button_label": "Cotizar mi proyecto",
-            "button_link": "https://wa.me/524427421651?text=Hola%20MV%20Labs%2C%20vi%20sus%20precios%20y%20quiero%20cotizar%20mi%20proyecto."
+        "conditions": {
+          "advance_percentage": 50,
+          "final_percentage": 50,
+          "includes_domain": false,
+          "includes_hosting": false,
+          "includes_tax": false,
+          "includes_maintenance": false,
+          "external_services": "Se cotizan por separado",
+          "later_changes": "Se cotizan por separado",
+          "exclusions": [
+            "Tienda en línea",
+            "Carrito de compras",
+            "Pasarelas de pago",
+            "Control de inventarios",
+            "Sistemas de reservaciones complejos",
+            "Paneles administrativos personalizados"
+          ]
         }
+      },
+      {
+        "id": "fixed-products",
+        "title": "Productos digitales",
+        "subtitle": "Precio fijo, entrega clara y alcance definido.",
+        "type": "fixed_price",
+        "items": [
+          {
+            "name": "Invitación digital",
+            "price": "Desde $999 MXN",
+            "description": "Invitación web para bodas, XV años, bautizos, cumpleaños o eventos especiales.",
+            "features": [
+              "Diseño responsivo",
+              "Información del evento",
+              "Ubicación con mapa",
+              "Confirmación de asistencia",
+              "Galería o foto principal"
+            ],
+            "ideal_for": "Eventos sociales y familiares"
+          },
+          {
+            "name": "Menú QR",
+            "price": "Desde $1,500 MXN",
+            "description": "Menú digital para restaurantes, cafeterías o negocios de alimentos.",
+            "features": [
+              "Diseño personalizado",
+              "Categorías de productos",
+              "Precios editables",
+              "Código QR listo para imprimir"
+            ],
+            "ideal_for": "Restaurantes y cafeterías"
+          },
+          {
+            "name": "Catálogo digital",
+            "price": "Desde $2,500 MXN",
+            "description": "Catálogo web para mostrar productos o servicios sin necesidad de tienda en línea completa.",
+            "features": [
+              "Listado de productos",
+              "Categorías",
+              "Botón de cotización por WhatsApp",
+              "Diseño responsive"
+            ],
+            "ideal_for": "Tiendas, proveedores y emprendedores"
+          }
+        ]
+      },
+      {
+        "id": "weekly-development",
+        "title": "Desarrollo semanal",
+        "subtitle": "Para proyectos que necesitan crecer, cambiar o construirse por etapas.",
+        "type": "weekly_subscription",
+        "items": [
+          {
+            "name": "Starter",
+            "price": "$999 MXN / semana",
+            "description": "Ideal para mejoras pequeñas, ajustes, automatizaciones simples o evolución de una web existente.",
+            "features": [
+              "Avances semanales",
+              "Revisión semanal",
+              "Ajustes menores",
+              "Soporte durante el desarrollo",
+              "Sin pago inicial grande"
+            ],
+            "ideal_for": "Proyectos pequeños o clientes que quieren empezar poco a poco"
+          },
+          {
+            "name": "Business",
+            "price": "$1,999 MXN / semana",
+            "description": "Para sistemas web, dashboards, portales internos o integraciones más completas.",
+            "features": [
+              "Desarrollo continuo",
+              "Planeación de funcionalidades",
+              "Reunión semanal",
+              "Despliegues por etapa",
+              "Soporte técnico durante el desarrollo"
+            ],
+            "ideal_for": "Negocios que necesitan una solución a medida"
+          },
+          {
+            "name": "Growth",
+            "price": "Cotización personalizada",
+            "description": "Para proyectos grandes, múltiples módulos o necesidades avanzadas.",
+            "features": [
+              "Prioridad de desarrollo",
+              "Arquitectura personalizada",
+              "Integraciones avanzadas",
+              "Escalabilidad",
+              "Acompañamiento estratégico"
+            ],
+            "ideal_for": "Empresas o proyectos con operación más compleja"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "¿No sabes qué plan elegir?",
+      "description": "Cuéntanos tu idea y te ayudamos a elegir entre un producto de precio fijo o un plan de desarrollo semanal.",
+      "button_label": "Cotizar mi proyecto",
+      "button_link": "https://wa.me/524427421651?text=Hola%20MV%20Labs%2C%20vi%20sus%20precios%20y%20quiero%20cotizar%20mi%20proyecto."
     }
+  }
 }
