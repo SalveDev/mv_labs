@@ -136,6 +136,19 @@
             "ideal_for": "Eventos sociales y familiares"
           },
           {
+            "name": "Landing page sencilla",
+            "price": "Desde $3,500 MXN",
+            "description": "Página de presentación para negocios, servicios o campañas.",
+            "features": [
+              "Sección de presentación",
+              "Servicios o productos",
+              "Botón de WhatsApp",
+              "Formulario de contacto",
+              "Diseño adaptable a celular"
+            ],
+            "ideal_for": "Negocios que necesitan presencia digital rápida"
+          },
+          {
             "name": "Menú QR",
             "price": "Desde $1,500 MXN",
             "description": "Menú digital para restaurantes, cafeterías o negocios de alimentos.",
