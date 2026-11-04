@@ -61,7 +61,6 @@
               "Testimonios y preguntas frecuentes",
               "Formularios con notificación por correo",
               "Integración con Google Maps",
-              "Google Analytics y Search Console",
               "SEO inicial optimizado",
               "2 rondas de ajustes"
             ],
@@ -134,19 +133,6 @@
               "Galería o foto principal"
             ],
             "ideal_for": "Eventos sociales y familiares"
-          },
-          {
-            "name": "Landing page sencilla",
-            "price": "Desde $3,500 MXN",
-            "description": "Página de presentación para negocios, servicios o campañas.",
-            "features": [
-              "Sección de presentación",
-              "Servicios o productos",
-              "Botón de WhatsApp",
-              "Formulario de contacto",
-              "Diseño adaptable a celular"
-            ],
-            "ideal_for": "Negocios que necesitan presencia digital rápida"
           },
           {
             "name": "Menú QR",

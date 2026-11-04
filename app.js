@@ -12,6 +12,14 @@ const process = [
   ['01','Entendemos','Conocemos tu negocio, clientes y objetivo.'],['02','Proponemos','Definimos una solución, alcance y tiempos claros.'],['03','Creamos','Diseñamos y construimos contigo, mostrando avances.'],['04','Lanzamos','Probamos, publicamos y dejamos todo listo para crecer.']
 ];
 
+const clientProjects = [
+  {name:'Michelle Vera Beauty',tag:'PÁGINA WEB · MAQUILLISTA',summary:'Una presencia digital para mostrar su trabajo de maquillaje profesional y conectar con nuevas clientas.',image:'assets/projects/michelle-vera.jpg',url:'https://michelleverabeauty-virid.vercel.app/',cta:'Visitar página web'},
+  {name:'El Camarón Empoderado',tag:'PÁGINA WEB · RESTAURANTE',summary:'Una experiencia visual que presenta la identidad y la propuesta gastronómica del restaurante.',image:'assets/projects/camaron.jpg',url:'https://camaronempoderado.com/',cta:'Visitar página web'},
+  {name:'Hefesto Lounge',tag:'PÁGINA WEB · SALÓN DE FIESTAS',summary:'Un espacio digital para conocer el salón e imaginar la próxima celebración.',image:'assets/projects/hefesto.png',url:'https://vercel.com/salvedevs-projects/hefesto-launge',cta:'Ver proyecto en Vercel'},
+  {name:'Juan Kanto',tag:'PÁGINA WEB · CANTANTE VERSÁTIL',summary:'Un escaparate para compartir su propuesta musical y acercarla a quienes buscan música para su evento.',image:'assets/projects/juan-kanto.jpg',url:'https://vercel.com/salvedevs-projects/juan-kanto',cta:'Ver proyecto en Vercel'},
+  {name:'Telatte la Oveja',tag:'MARKETING · REDES SOCIALES',summary:'Gestión de redes sociales a cargo de Karla. Conoce la presencia de la marca en Instagram.',image:'assets/projects/telattela.jpg',url:'https://www.instagram.com/telattelaoveja/',cta:'Ver Instagram'}
+];
+
 const projects = [
   {name:'Tienda Digital',tag:'E-COMMERCE DESTACADO',summary:'Una tienda en línea completa, adaptable a cualquier catálogo y preparada para convertir visitas en compras.',image:'assets/projects/tienda-demo.svg',url:'https://lucha-clubdemo.vercel.app/',cta:'Ver demo en vivo',featured:true},
   {name:'Sistema POS',tag:'SOFTWARE A LA MEDIDA',summary:'Punto de venta para administrar productos, cobros e información diaria desde una interfaz sencilla.',image:'assets/projects/pos.svg',url:'https://wa.me/524427421651?text=Hola%20MV%20Labs%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20sistema%20POS.',cta:'Cotizar un sistema POS'},
@@ -30,7 +38,14 @@ if (servicesGrid) servicesGrid.innerHTML = services.map(([icon,title,text])=>`<a
 
 if (document.querySelector('#timeline')) document.querySelector('#timeline').innerHTML = process.map(([num,title,text])=>`<li class="reveal"><span>${num}</span><div><h3>${title}</h3><p>${text}</p></div></li>`).join('');
 
-if (document.querySelector('#projects-grid')) document.querySelector('#projects-grid').innerHTML = projects.map(p=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} aria-label="${p.cta}: ${p.name}"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy">${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" ${p.url.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}>${p.cta}</a></div></article>`).join('');
+function renderProjects(selector, items) {
+  const grid = document.querySelector(selector);
+  if (!grid) return;
+  grid.innerHTML = items.map(p=>`<article class="project project-card reveal ${p.featured?'project-featured':''}"><a class="project-shot" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="${p.cta}: ${p.name} (abre en otra pestaña)"><img src="${p.image}" alt="Vista previa de ${p.name}" width="1200" height="760" loading="lazy">${p.featured?'<b>PROYECTO DESTACADO</b>':''}</a><div class="project-card-copy"><span>${p.tag}</span><h3>${p.name}</h3><p>${p.summary}</p><a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.cta}</a></div></article>`).join('');
+}
+renderProjects('#client-projects-grid', clientProjects);
+renderProjects('#client-projects-home', clientProjects.filter((_, index) => index === 0 || index === 4));
+renderProjects('#projects-grid', projects);
 
 if (document.querySelector('#faq-list')) document.querySelector('#faq-list').innerHTML = faqs.map(([q,a])=>`<details class="faq-item reveal"><summary><strong>${q}</strong><i aria-hidden="true">+</i></summary><p>${a}</p></details>`).join('');
 

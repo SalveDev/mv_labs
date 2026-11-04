@@ -16,6 +16,7 @@ export class ServicesPricingSection {
         <p class="card-description">${item.description}</p>
         <ul>${item.features.map(feature => `<li><span aria-hidden="true">✓</span>${feature}</li>`).join('')}</ul>
         <p class="ideal"><span>Ideal para</span>${item.ideal_for}</p>
+        <a class="landing-plan-cta" href="https://wa.me/524427421651?text=${encodeURIComponent(`Hola MV Labs, me interesa ${item.name}: ${item.price}. Quisiera más información.`)}" target="_blank" rel="noopener noreferrer">Consultar ${item.name}</a>
       </article>`;
   }
 
@@ -59,7 +60,7 @@ export class ServicesPricingSection {
     const { id, title, subtitle, description, categories, cta } = this.data;
     this.root.innerHTML = `
       <section class="pricing-hero" id="${id}">
-        <span class="eyebrow">SERVICIOS Y PRECIOS</span>
+        <span class="eyebrow">PLANES DE DESARROLLO WEB</span>
         <h1>${title}</h1>
         <p class="hero-subtitle">${subtitle}</p>
         <p class="hero-description">${description}</p>

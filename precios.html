@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#173b78" />
     <meta name="description" content="Planes de Landing Pages desde $2,500 MXN más IVA, productos digitales de precio fijo y desarrollo semanal de MV Labs." />
-    <meta property="og:title" content="Servicios y precios — MV Labs" />
+    <meta property="og:title" content="Planes de desarrollo web — MV Labs" />
     <meta property="og:description" content="Soluciones digitales claras y accesibles para cada etapa de tu negocio." />
-    <title>Servicios y precios — MV Labs</title>
+    <title>Planes de desarrollo web — MV Labs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="pricing.css?v=landing-1" />
-    <link rel="stylesheet" href="styles.css?v=pages-3" />
-  </head>
+    <link rel="stylesheet" href="pricing.css?v=pricing-2" />
+    <link rel="stylesheet" href="styles.css?v=studio-1" />
+    <link rel="stylesheet" href="design.css?v=navigation-2" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+</head>
   <body>
     <a class="skip-link" href="#services-pricing">Ir a los servicios</a>
     <header class="site-header" id="inicio">
@@ -22,24 +27,27 @@
         <span>MV Labs</span>
       </a>
       <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="servicios.html">Servicios</a><a href="planes.html">Planes</a><a href="proyectos.html">Proyectos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+        <a href="servicios.html">Servicios</a><a href="precios.html" aria-current="page">Desarrollo web</a><a href="planes.html">Redes sociales</a><a href="proyectos.html">Proyectos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
       </nav>
       <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú"><span></span><span></span></button>
       <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
-        <a href="servicios.html">Servicios</a><a href="planes.html">Planes</a><a href="proyectos.html">Proyectos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+        <a href="servicios.html">Servicios</a><a href="precios.html" aria-current="page">Desarrollo web</a><a href="planes.html">Redes sociales</a><a href="proyectos.html">Proyectos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
       </nav>
     </header>
 
     <main>
-      <section class="plans-section" id="planes"><div class="plans-heading"><span>PLANES DE REDES SOCIALES</span><h1>Una presencia constante.<br>Un plan para tu negocio.</h1><p>Facebook e Instagram · Precios de introducción en MXN por mes.</p></div><div data-plans class="plans-grid"></div><p class="plans-note">El presupuesto de Meta Ads está incluido en Presencia Digital y Presencia Premium, según el rango indicado.</p></section>
+      <nav class="plan-switch" aria-label="Tipos de planes"><a href="precios.html" aria-current="page">Desarrollo web</a><a href="planes.html">Redes sociales</a></nav>
       <div id="pricing-root" aria-live="polite">
         <p class="loading">Cargando servicios…</p>
       </div>
     </main>
 
-    <footer class="pricing-footer"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>MV Labs</span></a><p>Marketing × Development</p><p>© <span id="year"></span> MV Labs</p></footer>
-    <script src="plans.js?v=pages-3" type="module"></script>
+    <footer class="footer section-pad">
+      <div class="footer-main"><div><a class="brand brand-footer" href="index.html"><span class="brand-mark"><i></i><i></i></span><span>MV Labs</span></a><p>Marketing × Development</p></div><p class="footer-note">Estrategia, diseño y software<br />para negocios que quieren crecer.</p></div>
+      <div class="footer-links"><div><span>CONTACTO</span><a href="https://wa.me/524427421651?text=Hola%20MV%20Labs%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">WhatsApp</a></div><div><span>NAVEGACIÓN</span><a href="servicios.html">Servicios</a><a href="precios.html" aria-current="page">Desarrollo web</a><a href="planes.html">Redes sociales</a><a href="proyectos.html">Proyectos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div></div>
+      <div class="footer-bottom"><p>© <span id="year"></span> MV Labs. Todos los derechos reservados.</p><p>Hecho con estrategia y código en México.</p></div>
+    </footer>
     <script src="navigation.js?v=pages-3" type="module"></script>
-    <script src="pricing.js?v=landing-1" type="module"></script>
+    <script src="pricing.js?v=navigation-2" type="module"></script>
   </body>
 </html>
