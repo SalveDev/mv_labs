@@ -15,8 +15,8 @@ const process = [
 const clientProjects = [
   {name:'Michelle Vera Beauty',tag:'PÁGINA WEB · MAQUILLISTA',summary:'Una presencia digital para mostrar su trabajo de maquillaje profesional y conectar con nuevas clientas.',image:'assets/projects/michelle-vera.jpg',url:'https://michelleverabeauty-virid.vercel.app/',cta:'Visitar página web'},
   {name:'El Camarón Empoderado',tag:'PÁGINA WEB · RESTAURANTE',summary:'Una experiencia visual que presenta la identidad y la propuesta gastronómica del restaurante.',image:'assets/projects/camaron.jpg',url:'https://camaronempoderado.com/',cta:'Visitar página web'},
-  {name:'Hefesto Lounge',tag:'PÁGINA WEB · SALÓN DE FIESTAS',summary:'Un espacio digital para conocer el salón e imaginar la próxima celebración.',image:'assets/projects/hefesto.png',url:'https://vercel.com/salvedevs-projects/hefesto-launge',cta:'Ver proyecto en Vercel'},
-  {name:'Juan Kanto',tag:'PÁGINA WEB · CANTANTE VERSÁTIL',summary:'Un escaparate para compartir su propuesta musical y acercarla a quienes buscan música para su evento.',image:'assets/projects/juan-kanto.jpg',url:'https://vercel.com/salvedevs-projects/juan-kanto',cta:'Ver proyecto en Vercel'},
+  {name:'Hefesto Lounge',tag:'PÁGINA WEB · SALÓN DE FIESTAS',summary:'Un espacio digital para conocer el salón e imaginar la próxima celebración.',image:'assets/projects/hefesto.png',url:'https://www.hefestolounge.com/',cta:'Visitar página web'},
+  {name:'Juan Kanto',tag:'PÁGINA WEB · CANTANTE VERSÁTIL',summary:'Un escaparate para compartir su propuesta musical y acercarla a quienes buscan música para su evento.',image:'assets/projects/juan-kanto.jpg',url:'https://juan-kanto.vercel.app/',cta:'Visitar página web'},
   {name:'Telatte la Oveja',tag:'MARKETING · REDES SOCIALES',summary:'Gestión de redes sociales a cargo de Karla. Conoce la presencia de la marca en Instagram.',image:'assets/projects/telattela.jpg',url:'https://www.instagram.com/telattelaoveja/',cta:'Ver Instagram'}
 ];
 
